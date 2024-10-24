@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import Sickle from "../../components/Sickle/Sickle";
+//import Counter from "../../components/Counter/Counter";
 
 import axios from "axios";
 
@@ -9,34 +11,50 @@ const HomePage = () => {
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    const fetchCars = async () => {
-      try {
-        let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
-          headers: {
-            Authorization: "Bearer " + token,
-          },
-        });
-        setCars(response.data);
-      } catch (error) {
-        console.log(error.response.data);
-      }
-    };
-    fetchCars();
-  }, [token]);
-  return (
+  const isLoggedIn = user != null && user != undefined;
+  
+  return(
     <div className="container">
-      <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
+      {isLoggedIn ? (
+        <h1>Welcome back {user.username}!</h1>
+      ):(
+        <h1>Welcome Friends!</h1>
+      )}
+      <br />
+      <br />
+    <Sickle />
     </div>
   );
 };
+
+//   const [cars, setCars] = useState([]);
+
+//   useEffect(() => {
+//     const fetchCars = async () => {
+//       try {
+//         let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
+//           headers: {
+//             Authorization: "Bearer " + token,
+//           },
+//         });
+//         setCars(response.data);
+//       } catch (error) {
+//         console.log(error.response.data);
+//       }
+//     };
+//     fetchCars();
+//   }, [token]);
+//   return (
+//     <div className="container">
+//       <h1>Home Page for {user.username}!</h1>
+//       {cars &&
+//         cars.map((car) => (
+//           <p key={car.id}>
+//             {car.year} {car.model} {car.make}
+//           </p>
+//         ))}
+//     </div>
+//   );
+// };
 
 export default HomePage;
