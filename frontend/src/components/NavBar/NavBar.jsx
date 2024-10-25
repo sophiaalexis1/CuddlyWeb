@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import Logo from "../../Assets/Logo.png";
 import "./NavBar.css";
 
 const Navbar = () => {
@@ -10,9 +11,9 @@ const Navbar = () => {
   return (
     <div className="navBar">
       <ul>
-        <li className="brand">
+        <li className="logo">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>Logo Icon</b>
+          <img src={Logo} alt="Logo" className='logo' />
           </Link>
         </li>
         <li className="brand">
@@ -21,27 +22,27 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/about/" style={{ textDecoration: "none", color: "white" }}>
             <b>About Me</b>
           </Link>
         </li>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/products/" style={{ textDecoration: "none", color: "white" }}>
             <b>Products</b>
           </Link>
         </li>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/donate/" style={{ textDecoration: "none", color: "white" }}>
             <b>Donate</b>
           </Link>
         </li>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/blogs/" style={{ textDecoration: "none", color: "white" }}>
             <b>Blog</b>
           </Link>
         </li>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/cart/" style={{ textDecoration: "none", color: "white" }}>
             <b>Cart</b>
           </Link>
         </li>

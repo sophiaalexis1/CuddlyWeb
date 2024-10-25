@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Sickle from "../../components/Sickle/Sickle";
-//import Counter from "../../components/Counter/Counter";
+import Counter from "../../components/Counter/Counter";
 
 import axios from "axios";
 
@@ -22,6 +22,7 @@ const HomePage = () => {
       )}
       <br />
       <br />
+    <Counter />
     <Sickle />
     </div>
   );

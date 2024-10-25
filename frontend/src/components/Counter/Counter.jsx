@@ -29,7 +29,7 @@ const Counter = () => {
                         <i className="fa fa-globe" aria-hidden="true"></i>
                         </div>
                         <span className="counter-value">1963</span>
-                        <h3>Web Designing</h3>
+                        <h3>Goal</h3>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6">
@@ -38,7 +38,7 @@ const Counter = () => {
                             <i className="fa fa-rocket"></i>
                         </div>
                         <span className="counter-value">1854</span>
-                        <h3>Web Development</h3>
+                        <h3>Amount Donated</h3>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6">
@@ -47,7 +47,7 @@ const Counter = () => {
                             <i className="fa fa-rocket"></i>
                         </div>
                         <span className="counter-value">1854</span>
-                        <h3>Brand Building</h3>
+                        <h3>Amount Left</h3>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6">
@@ -56,7 +56,7 @@ const Counter = () => {
                             <i className="fa fa-rocket"></i>
                         </div>
                         <span className="counter-value">1854</span>
-                        <h3>Responsive Design</h3>
+                        <h3>Donaters</h3>
                     </div>
                 </div>
             </div>

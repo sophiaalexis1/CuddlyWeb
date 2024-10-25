@@ -7,7 +7,9 @@ const Sickle = () => {
     return (
         <div>
             <br />
+            <div className='header'>
             <h2>What is Sickle Cell Anemia?</h2>
+            </div>
             <br />
             <div className='sickle'>
             <p>

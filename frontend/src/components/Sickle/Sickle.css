@@ -9,3 +9,10 @@
     text-align: left;
     padding: 2em;
 }
+
+.header {
+    text-align: center;
+    font-size: 40px;
+    background-image: url('../../Assets/redbloodcells.jpg');
+    color: white;
+}
