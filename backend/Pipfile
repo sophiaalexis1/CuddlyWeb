@@ -11,6 +11,7 @@ mysql-connector-python = "*"
 django-cors-headers = "*"
 tzdata = "*"
 django-restframework = "*"
+pillow = "*"
 
 [dev-packages]
 autopep8 = "*"
